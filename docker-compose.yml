@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/ApiGateway/Dockerfile
+services:
+  identity:
+    image: ${DOCKER_REGISTRY-}identity
+    build:
+      context: .
+      dockerfile: Identity/Identity.Api/Dockerfile
+services:
+  consumer:
+    image: ${DOCKER_REGISTRY-}consumer
+    build:
+      context: .
+      dockerfile: Consumer/Consumer.Api/Dockerfile
+services:
+  admin:
+    image: ${DOCKER_REGISTRY-}admin
+    build:
+      context: .
+      dockerfile: Admin/Admin.Api/Dockerfile
+services:
+  provider:
+    image: ${DOCKER_REGISTRY-}provider
+    build:
+      context: .
+      dockerfile: Provider/Provider.Api/Dockerfile
+services:
+  services:
+    image: ${DOCKER_REGISTRY-}services
+    build:
+      context: .
+      dockerfile: Services/Services.Api/Dockerfile

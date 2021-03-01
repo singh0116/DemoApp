@@ -1,0 +1,14 @@
+bin
+obj
+.vscode
+*.db
+publish
+.db
+.sqlite
+.vs
+
+.db
+.sqlite
+.vs
+*.cache
+node_modules
